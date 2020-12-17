@@ -67,6 +67,7 @@ foreach(testfile
         tests/c/test_multihash_new.c)
 
     get_filename_component(name_we ${testfile} NAME_WE)
+    set(testfile "${CMAKE_CURRENT_SOURCE_DIR}/${testfile}")
     add_unit_test(NAME ${name_we}
             SOURCES ${testfile}
             LIBS multihash)
